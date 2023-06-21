@@ -1,0 +1,23 @@
+/*
+ * Ex5.c
+ *
+ *  Created on: Jun 20, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main() {
+	char alphabet;
+	printf("Enter a character: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%c",&alphabet);
+	unsigned char i;
+	if ((alphabet>=65)&&(alphabet<=122) && !((alphabet<97) && (alphabet>90)) )
+		for (i=65;i<=122;i++)
+		{
+			if (alphabet==i)
+				printf("%c is a character",alphabet);
+		}
+	else
+		printf("%c is not a character",alphabet);
+
+}
