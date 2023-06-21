@@ -1,0 +1,22 @@
+/*
+ * Ex6.c
+ *
+ *  Created on: Jun 20, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main() {
+	 int num;
+	 int i;
+	 int sum=0;
+//we may declare the variable as unsigned, but I choose signed because if the user tries to enter a negetive
+	 printf("Enter an integer: ");
+	 fflush(stdin); fflush(stdout);
+	 scanf("%d", &num);
+	 if (num>0)
+	 {for(i=1;i<=num;i++)
+		 sum=sum+i;
+	 printf("Sum = %d",sum);
+	 }
+	 else printf("You didn't enter a natural number");
+}
