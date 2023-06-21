@@ -1,0 +1,23 @@
+/*
+ * Ex7.c
+ *
+ *  Created on: Jun 20, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main() {
+	 int num;
+	 int i;
+	 int fact=1;
+//we may declare the variable as unsigned, but I choose signed because if the user tries to enter a negetive
+	 printf("Enter an integer: ");
+	 fflush(stdin); fflush(stdout);
+	 scanf("%d", &num);
+	 if (num>0)
+	 {for(i=1;i<=num;i++)
+		 fact=fact*i;
+	 printf("factorial = %d",fact);
+	 }
+	 else if (num==0) printf("factorial = 1");
+	 else printf("Error!!! The factorial of the negative number doesn't exist");
+}
