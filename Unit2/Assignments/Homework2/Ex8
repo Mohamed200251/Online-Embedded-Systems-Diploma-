@@ -1,0 +1,43 @@
+/*
+ * Ex8.c
+ *
+ *  Created on: Jun 20, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main() {
+	 float num1, num2;
+	 char operation;
+	 printf("Enter the operator either +, -, * or /: ");
+	 fflush(stdin); fflush(stdout);
+	 scanf("%c", &operation);
+	 while (!((operation=='+')||(operation=='-')||(operation=='*')||(operation=='/')))
+		 {
+		 printf("Enter one of the operators (+,-,*,/): ");
+		 fflush(stdin); fflush(stdout);
+		 scanf("%c", &operation);
+		 }
+	 printf("Enter the two operands: ");
+	 fflush(stdin); fflush(stdout);
+	 scanf("%f %f",&num1,&num2);
+	 switch (operation)
+	 {
+	 case '+':
+	 printf("%f %c %f = %f",num1,operation,num2,num1+num2);
+	 break;
+	 case '-':
+	 	 printf("%f %c %f = %f",num1,operation,num2,num1-num2);
+	 	 break;
+	 case '*':
+	 	 printf("%f %c %f = %f",num1,operation,num2,num1*num2);
+	 	 break;
+	 case '/':
+	 {
+	 	 if (num2==0)
+	 		 printf("The division is not possible because the second operand is zero");
+	 	 else
+	 		 printf("%f %c %f = %f",num1,operation,num2,num1/num2);
+	 	 break;
+	 }
+	 }
+}
