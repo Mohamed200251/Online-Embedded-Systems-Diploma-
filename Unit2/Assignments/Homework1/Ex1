@@ -1,0 +1,12 @@
+/*
+ * Ex1.c
+ *
+ *  Created on: Jun 23, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	printf("C programming");
+}
+
