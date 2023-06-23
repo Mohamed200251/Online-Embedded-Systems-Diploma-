@@ -1,0 +1,23 @@
+/*
+ * Ex.c
+ *
+ *  Created on: Jun 23, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	float a, b;
+	printf("Enter the value of a: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f",&a);
+	printf("Enter the value of b: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f",&b);
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	printf("\nAfter swapping, value of a = %f", a);
+	printf("\nAfter swapping, value of b = %f", b);
+}
+
