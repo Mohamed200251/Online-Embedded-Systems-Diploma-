@@ -1,0 +1,16 @@
+/*
+ * Ex2.c
+ *
+ *  Created on: Jun 23, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	int num;
+	printf("Enter an integer: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&num);
+	printf("You entered: %d",num);
+}
+
