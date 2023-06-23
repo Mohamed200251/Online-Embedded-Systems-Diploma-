@@ -1,0 +1,15 @@
+/*
+ * Ex4.c
+ *
+ *  Created on: Jun 23, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	float num1, num2;
+	printf("Enter the two numbers: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f %f",&num1, &num2);
+	printf("Product: %f",num1*num2);
+}
