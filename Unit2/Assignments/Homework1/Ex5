@@ -1,0 +1,15 @@
+/*
+ * Ex5.c
+ *
+ *  Created on: Jun 23, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	char character;
+	printf("Enter the character: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%c",&character);
+	printf("ASCII value of %c: %d",character,character);
+}
