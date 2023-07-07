@@ -1,0 +1,25 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 6, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	int i=1;
+	int product, num;
+	product=1;
+	do
+	{
+		printf("Enter num%d: ",i);
+		fflush(stdin); fflush(stdout);
+		scanf("%d",&num);
+		i++;
+		if (num==0)
+			continue;
+		product*=num;
+	}
+	while(i<=4);
+	printf("product= %d",product);
+}
