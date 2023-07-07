@@ -1,0 +1,35 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 6, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	float a[2][2],b[2][2];
+	int m,n;
+	printf("Enter the elements of the 1st matrix\r\n");
+	for(m=0;(m<=1);m++)
+		for(n=0;(n<=1);n++)
+		{
+			printf("Enter a%d%d: ",m+1,n+1);
+			fflush(stdin); fflush(stdout);
+			scanf("%f", &a[m][n]);
+		}
+	printf("Enter the elements of the 2nd matrix\r\n");
+	for(m=0;(m<=1);m++)
+		for(n=0;(n<=1);n++)
+		{
+			printf("Enter b%d%d: ",m+1,n+1);
+			fflush(stdin); fflush(stdout);
+			scanf("%f", &b[m][n]);
+		}
+	printf("Sum of matrix=");
+	for(m=0;(m<=1);m++)
+		{
+		printf("\r\n");
+		for(n=0;(n<=1);n++)
+		printf("%.1f\t",a[m][n]+b[m][n]);
+		}
+}
