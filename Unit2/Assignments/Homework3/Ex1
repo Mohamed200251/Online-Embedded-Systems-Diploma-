@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 6, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int main()
+{
+	int i,n;
+	i=1;
+	float sum, num;
+	sum=0;
+	printf("Enter the maximum no of inputs: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&n);
+	do
+	{
+		printf("Enter n%d: ",i);
+		fflush(stdin); fflush(stdout);
+		scanf("%f",&num);
+		if (num<0)
+			break;
+		sum+=num;
+		i++;
+	}
+	while(i<=n);
+	printf("Average= %f",sum/(i-1));
+}
