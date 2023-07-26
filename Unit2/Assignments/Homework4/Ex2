@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 26, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+
+unsigned int factorial(unsigned int);
+int main()
+{
+	unsigned int a;
+	printf("Enter a positive integer: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&a);
+	printf("factorial of %d = %d",a,factorial(a));
+	return 0;
+}
+unsigned int factorial(unsigned int a)
+{
+	unsigned int fact;
+	fact=a;
+	if (a>1)
+	fact=fact*factorial(--a);
+	if (a==0)
+		fact=1;
+	return fact;
+}
+
