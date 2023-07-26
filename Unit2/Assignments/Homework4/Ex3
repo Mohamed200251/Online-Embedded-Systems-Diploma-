@@ -1,0 +1,27 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 26, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+#include <string.h>
+void reverse(char text[])
+{
+int i;
+for(i=strlen(text)-1;i>=0;i--)
+{
+	printf("%c",text[i]);
+}
+}
+int main()
+{
+	char text[100];
+	printf("Enter a sentence: ");
+	fflush(stdin); fflush(stdout);
+	gets(text);
+	reverse(text);
+	return 0;
+}
+
+
