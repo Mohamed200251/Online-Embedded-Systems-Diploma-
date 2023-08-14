@@ -1,0 +1,33 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 14, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+float sqrt(int);
+int main()
+{
+int num;
+printf("Enter a number:");
+fflush(stdin);fflush(stdout);
+scanf("%d",&num);
+printf("The square root of %d is %.3f",num,sqrt(num));
+return 0;
+}
+float sqrt(int num)
+{
+float x=num;
+if (num>=0)
+{
+	while (((x*x)-num)>0.00001)
+	x=x-(x*x-num)/(2*x);  //using Newton raphson method for solving nonlinear equation
+return x;
+}
+else
+	{
+	printf("There is no square root for negative number");
+	return 0;
+	}
+
+}
