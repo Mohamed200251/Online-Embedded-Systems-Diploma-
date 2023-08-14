@@ -1,0 +1,37 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 14, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+void prime(int,int);
+int main()
+{
+int start, end;
+printf("Enter The start of interval:");
+fflush(stdin);fflush(stdout);
+scanf("%d",&start);
+printf("Enter The end of interval:");
+fflush(stdin);fflush(stdout);
+scanf("%d",&end);
+prime(start,end);
+return 0;
+}
+void prime(int start, int end)
+{
+printf("The prime numbers between %d and %d are:",start,end);
+int primeNum, num;
+for(primeNum=start;primeNum<=end;primeNum++)
+	{
+	for(num=primeNum-1;num>=2;num--)   // number one is not prime number
+		{
+		if ((primeNum%num)==0)
+			break;
+		else
+			continue;
+		}
+	if(num==1)
+	printf("%d ",primeNum);
+	}
+}
