@@ -1,0 +1,33 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 14, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int reverse(char*);
+int main()
+{
+	char num[100];
+	printf("Enter a number:");
+	fflush(stdin);fflush(stdout);
+	gets(num);
+	printf("The reverse (in digits) number is %d",reverse(num));
+	return 0;
+}
+int reverse(char num[])
+{
+	char length=strlen(num);
+	char i,temp;
+	int result;
+	for(i=1;i<=(length/2);i++)
+	{
+		temp=num[i-1];
+		num[i-1]=num[length-i];
+		num[length-i]=temp;
+	}
+	result=atoi(num);
+	return result;
+}
