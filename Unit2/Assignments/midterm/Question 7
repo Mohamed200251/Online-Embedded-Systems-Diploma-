@@ -1,0 +1,27 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 18, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+# include<string.h>
+# include<stdlib.h>
+int sum(int);
+int main()
+{
+	printf("The summation= %d",sum(100));
+}
+int sum(int i)
+{
+	int summation;
+	if(i>0)
+	{
+		summation=i;
+		--i;
+		summation=summation+sum(i);
+	}
+	else
+		return 0;
+	return summation;
+}
