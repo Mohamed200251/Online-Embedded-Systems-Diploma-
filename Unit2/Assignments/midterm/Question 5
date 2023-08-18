@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 18, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+# include<string.h>
+# include<stdlib.h>
+unsigned char binary(int);
+int main()
+{
+	int number;
+	printf("Enter a number: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&number);
+	printf("number of ones in the binary of %d = %d",number,binary(number));
+}
+unsigned char binary(int num)
+{
+	char bit_number;
+	unsigned char counterOfones=0;
+	for(bit_number=31;bit_number>=0;bit_number--)
+	{
+		if(num & (1<<bit_number))
+			counterOfones++;
+	}
+return counterOfones;
+}
