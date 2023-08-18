@@ -1,0 +1,28 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 18, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+int sum(int);
+int main()
+{
+	int number;
+	printf("Enter a number: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&number);
+	printf("The sum of the digits in number %d = %d",number, sum(number));
+}
+int sum(int num)
+{
+int summation=0;
+if (num<0)
+	num=num*-1;
+while(num!=0)
+{
+summation=summation+num%10;
+num=num/10;
+}
+return summation;
+}
