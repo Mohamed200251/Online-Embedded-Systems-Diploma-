@@ -17,7 +17,7 @@ int main()
 int max(int num)
 {
 	char max=0;
-	char counter=12,start,end;
+	char counter=31,start,end;
 	for(;counter>=0;counter--)
 			if ((num&(1<<counter))==0)
 					{start=counter; break;}
