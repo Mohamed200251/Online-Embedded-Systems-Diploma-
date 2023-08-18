@@ -1,0 +1,36 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 18, 2023
+ *      Author: Alkhouly
+ */
+#include <stdio.h>
+void reverse(int*,int);
+int main()
+{
+	int array[100];
+	int length,i;
+	printf("Enter the number of the elements: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&length);
+	for(i=0;i<length;i++)
+	{
+		printf("Enter the element %d: ",i+1);
+		fflush(stdin); fflush(stdout);
+		scanf("%d",&array[i]);
+	}
+	printf("The elements of the reversed array are: ");
+	reverse(array,length);
+	for(i=0;i<length;i++)
+		printf("%d ", array[i]);
+}
+void reverse(int array[],int length)
+{
+	int i,temp;
+	for(i=1;i<=length/2;i++)
+	{
+		temp=array[i-1];
+		array[i-1]=array[length-i];
+		array[length-i]=temp;
+	}
+}
